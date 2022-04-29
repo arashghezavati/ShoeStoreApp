@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.udacity.shoestore.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.udacity.shoestore.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.udacity.shoestore.InstructionFragment"
+        android:label="InstructionFragment" >
+        <action
+            android:id="@+id/action_instructionFragment_to_shoelistFragment"
+            app:destination="@id/shoelistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoelistFragment"
+        android:name="com.udacity.shoestore.ShoelistFragment"
+        android:label="ShoelistFragment" >
+        <action
+            android:id="@+id/action_shoelistFragment_to_shoe_detailFragment"
+            app:destination="@id/shoe_detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoe_detailFragment"
+        android:name="com.udacity.shoestore.shoe_detailFragment"
+        android:label="shoe_detailFragment" >
+        <action
+            android:id="@+id/action_shoe_detailFragment_to_shoelistFragment"
+            app:destination="@id/shoelistFragment" />
+    </fragment>
+</navigation>
